@@ -1,0 +1,8 @@
+#!/bin/sh
+# this script sets the colorscheme to one in the ~/.config/colors directory
+
+clear
+ls ~/.config/colors
+read -p "Which colorscheme would you like to set?" SCHEME
+echo "Setting colors to ${SCHEME}..."
+xrdb -merge ~/.config/colors/${SCHEME} && echo "Finished successfully." || echo "That scheme doesn't exist."
