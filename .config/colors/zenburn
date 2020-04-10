@@ -1,0 +1,48 @@
+! ! zenburn by https://github.com/jnurmine
+! ! this spin of it i found in the Gogh repository
+! special
+*.foreground:   #dcdccc
+*.background:   #3f3f3f
+*.cursorColor:  #dcdccc
+
+! black
+*.color0:       #4d4d4d
+*.color8:       #709080
+
+! red
+*.color1:       #705050
+*.color9:       #dca3a3
+
+! green
+*.color2:       #60b48a
+*.color10:      #c3bf9f
+
+! yellow
+*.color3:       #dfaf8f
+*.color11:      #f0dfaf
+
+! blue
+*.color4:       #506070
+*.color12:      #94bff3
+
+! magenta
+*.color5:       #dc8cc3
+*.color13:      #ec93d3
+
+! cyan
+*.color6:       #8cd0d3
+*.color14:      #93e0e3
+
+! white
+*.color7:       #dcdccc
+*.color15:      #ffffff
+
+dwm.selfgcolor: #dc8cc3
+dwm.selbgcolor: #dcdccc
+
+dwm.normfgcolor: #dcdccc
+dwm.normbgcolor: #3f3f3f
+
+dwm.selbordercolor: #dc8cc3
+dwm.normbordercolor: #dcdccc
+
