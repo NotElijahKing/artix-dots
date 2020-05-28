@@ -1,0 +1,32 @@
+set border 3
+
+# Make a screenshot
+# alias sshot exec import -window root ~/screenshot-$(date +%F).jpg
+# definekey top M-C-Print sshot
+
+#virtual desks
+exec /usr/bin/rpws init 4 -k
+
+definekey top M-l exec ratpoison -c "select -" -c "gprev" -c "next"
+definekey top M-h exec ratpoison -c "select -" -c "gnext" -c "next"
+
+#switch between windows
+definekey top M-j next
+definekey top M-k prev
+
+#apps
+unbind c
+bind c exec st
+
+bind f exec surf
+bind n exec nnn
+bind z exec zathura
+
+escape C-x
+
+# dont know what these do, may remove later (source archlinux bbs user wra!th)
+bind o only
+bind v hsplit
+bind h vsplit
+
+rudeness 12
