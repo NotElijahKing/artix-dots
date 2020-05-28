@@ -1,28 +1,37 @@
-# TODO: get vi mode working
+# notelijahking's .mkshrc
+# the old (aka updated) one was lost so most of this is new
+# credits to notabug.org/Aicaya for the prompt, I added a lambda.
 
-# this part belongs to https://notabug.org/Aicaya
 myprompt(){
     [ "$PWD" = "$HOME" ] && aa='λ' || aa="${PWD##*/} λ"
     printf ' \033[0;35m[%s]\033[0;33m%s \033[0;37m» \033[0m' "$aa" 
-
 }
 
 PS1="\$(myprompt)"
 
-# aliases
-# the first two don't benefit anyone else, really 
+# path
+export PATH="$PATH:$HOME/Development/Scripts"
 
-# alias scrot=/home/ek/Dev/scripts/scrot
-# alias colorset=/home/ek/Dev/scripts/colorset
+# shell options
+set -o vi
+set -o utf8-mode
 
-alias ls='ls -L --color=auto --group-directories-first'
-alias la='ls --almost-all --color=auto'
-alias vim='nvim'
+# regular useful aliases 
 alias ..='cd ..'
+alias grep='grep --color'
+alias la='ls --almost-all --color=auto'
+alias ls='ls --color=auto --group-directories-first'
+
+# please don't judge me, i have complicated tastes
+alias micro='~/micro'
+alias nano='nano -w'
+alias vim='vis'
+
+# specific to me
+alias fallout2='wine ~/Games/GOG/Fallout\ 2/fallout2.exe'
+
+# exports
 
 export SHELL="mksh"
 export TERMINAL="st"
-export EDITOR='nvim'
-
-# set ctrl / capslock for emacs
-/usr/bin/setxkbmap -option "ctrl:swapcaps"
+export EDITOR='nano'
